@@ -35,7 +35,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(
-        "vercel-jvox.vercel.app/api/v1/application/post",
+        "https://vercel-jvox.vercel.app/api/v1/application/post",
         formData,
         {
           withCredentials: true,
