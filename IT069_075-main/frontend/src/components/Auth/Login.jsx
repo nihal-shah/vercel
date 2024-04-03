@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "vercel-jvox.vercel.app/api/v1/user/login",
+        "https://vercel-jvox.vercel.app/api/v1/user/login",
         { email, password, role },
         {
           headers: {
