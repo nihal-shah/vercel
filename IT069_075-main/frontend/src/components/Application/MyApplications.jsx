@@ -18,7 +18,7 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employer") {
         axios
-          .get("vercel-jvox.vercel.app/api/v1/application/employer/getall", {
+          .get("https://vercel-jvox.vercel.app/api/v1/application/employer/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -26,7 +26,7 @@ const MyApplications = () => {
           });
       } else {
         axios
-          .get("vercel-jvox.vercel.app/api/v1/application/jobseeker/getall", {
+          .get("https://vercel-jvox.vercel.app/api/v1/application/jobseeker/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -43,7 +43,7 @@ const MyApplications = () => {
   }
   const acceptApplication=()=>{
     try{
-      axios.get("vercel-jvox.vercel.app/api/v1/application/employer/accept", {
+      axios.get("https://vercel-jvox.vercel.app/api/v1/application/employer/accept", {
         withCredentials: true,
       })
       .then((res) => {
@@ -54,7 +54,7 @@ const MyApplications = () => {
   }
   const rejectApplication=()=>{
     try{
-      axios.get("vercel-jvox.vercel.app/api/v1/application/employer/reject", {
+      axios.get("https://vercel-jvox.vercel.app/api/v1/application/employer/reject", {
         withCredentials: true,
       })
       .then((res) => {
@@ -67,7 +67,7 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`vercel-jvox.vercel.app/api/v1/application/delete/${id}`, {
+        .delete(`https://vercel-jvox.vercel.app/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
