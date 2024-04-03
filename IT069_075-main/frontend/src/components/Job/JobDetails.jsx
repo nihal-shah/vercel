@@ -12,7 +12,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`vercel-jvox.vercel.app/api/v1/job/${id}`, {
+      .get(`https://vercel-jvox.vercel.app/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
