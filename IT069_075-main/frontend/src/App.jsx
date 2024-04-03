@@ -23,7 +23,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "vercel-jvox.vercel.app/api/v1/user/getuser",
+          "https://vercel-jvox.vercel.app/api/v1/user/getuser",
           {
             withCredentials: true,
           }
